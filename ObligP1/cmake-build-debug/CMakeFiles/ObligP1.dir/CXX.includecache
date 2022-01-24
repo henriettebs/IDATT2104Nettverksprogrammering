@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/henriettebs/Documents/Dataingenioer/IDATT2104 Nettverksprogrammering/ObligP/ObligP1/main.cpp
+iostream
+-
+thread
+-
+vector
+-
+
