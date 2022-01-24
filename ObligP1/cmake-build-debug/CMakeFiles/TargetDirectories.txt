@@ -1,3 +1,0 @@
-/Users/henriettebs/Documents/Dataingenioer/IDATT2104 Nettverksprogrammering/ObligP/ObligP1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/henriettebs/Documents/Dataingenioer/IDATT2104 Nettverksprogrammering/ObligP/ObligP1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/henriettebs/Documents/Dataingenioer/IDATT2104 Nettverksprogrammering/ObligP/ObligP1/cmake-build-debug/CMakeFiles/ObligP1.dir
