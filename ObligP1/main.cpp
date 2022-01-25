@@ -10,7 +10,10 @@ bool checkIfPrime(int num) {
             return false; //Returnerer false dersom num ikke er et primtall
         }
     }
-    return true; //Returnerer true dersom num er et primtall
+    if(num >= 2){
+        return true; //Returnerer true dersom num er et primtall større enn eller lik 2
+    }
+
 }
 
 void goThroughRange(int low, int high, vector<int> *primes, int numberOfIntervals){
@@ -33,12 +36,13 @@ int main() {
     vector<int> primes;
 
     for(int i = 0; i < numberOfThreads; i++){
-        threads.emplace_back(goThroughRange, lowerLimit + i, upperLimit, &array[i], numberOfThreads); //Pointeren til vektoren primes(med primtallene), blir lagt til i threads
+        threads.emplace_back(goThroughRange, lowerLimit + i, upperLimit, &array[i], numberOfThreads); //Pointeren til vektoren primes(med primtallene), blir lagt til i vektoren threads
+        // og trådene begynner å kjøre pga. emplace_back()
         cout << "Thread " << i + 1 << ", ID: " << threads.at(i).get_id() << endl; //Skriver ut tråd-id
     }
 
     for(auto &thread: threads){
-        thread.join(); //Kjører de gitte trådene
+        thread.join(); //Venter til alle trådene har kjørt ferdig
     }
 
     for(int i = 0; i < numberOfThreads; i++) {
@@ -48,6 +52,6 @@ int main() {
     sort(primes.begin(), primes.end()); //Primtallene blir sortert, med C++ sin egen sorteringsmetode
 
     for(int i = 0; i < primes.size(); i++){
-        cout << primes.at(i) << "\n"; //Primtallene blir skrive ut
+        cout << primes.at(i) << "\n"; //Primtallene blir skrive ut i sortert rekkefølge
     }
 }
